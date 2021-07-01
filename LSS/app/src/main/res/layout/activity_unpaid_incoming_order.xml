@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnpaidIncomingOrder"
+    android:background="#EAEAEA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_back_ios_new_24"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Incoming Order"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="25sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#B81313">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80sp"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="12sp"
+            android:layout_marginLeft="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_credit_card_24"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="20sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginTop="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unpaid"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_marginLeft="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Awaiting for payment"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="12sp"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="-1dp"
+        android:orientation="vertical">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver Information"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sarah Cabrera"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09061898041"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2544 Tolintino Street, pasay , Metro Manila, Philippines"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="12sp"
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_below="@+id/recycler_view"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Method"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginTop="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mr. Speed"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="12sp"
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_below="@+id/service"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Information"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SM Payment"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="12sp"
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_below="@+id/payment"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Number"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
